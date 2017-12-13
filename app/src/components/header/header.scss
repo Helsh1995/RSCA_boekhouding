@@ -1,0 +1,61 @@
+.platform-ios {
+  header {
+    ion-navbar, ion-title {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+header {
+
+  .toolbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+  }
+
+  .header-item {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 30px;
+  }
+
+  .left-item {
+    margin-right: auto;
+
+    justify-content: flex-start;
+
+    width: 20%;
+    margin-left: 20px;
+
+  }
+
+  .center-item {
+    margin: 0 auto;
+
+    justify-content: center;
+
+    width: 80%;
+  }
+
+  .right-item {
+
+    justify-content: flex-end;
+
+    width: 20%;
+
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  span {
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+}

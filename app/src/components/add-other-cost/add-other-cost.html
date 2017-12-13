@@ -1,0 +1,65 @@
+<div>
+
+  <div class="matching-fields">
+
+    <div class="input-field">
+
+      <label for="other-cost-date">
+        Datum:
+      </label>
+      <div class="input">
+
+        <input type="date"
+               id="other-cost-date"
+               [(ngModel)]="otherCost.date">
+        <p>{{ getErrorMessage('date') }}</p>
+
+      </div>
+    </div>
+
+    <div class="input-field">
+
+      <label for="other-cost-date">
+        Reden:
+      </label>
+
+      <div class="input">
+
+        <input type="text"
+               id="other-cost-reason"
+               [(ngModel)]="otherCost.reason">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+
+    <div class="input-field">
+
+      <label for="other-cost-profit">
+        Inkomst/verlies:
+      </label>
+
+      <div class="input">
+        <input type="number"
+               id="other-cost-profit"
+               [(ngModel)]="otherCost.amount">
+        <p>{{ getErrorMessage('amount') }}</p>
+
+      </div>
+    </div>
+
+    <div class="input-field">
+
+      <label for="other-cost-is-profit">Is Winst?</label>
+      <input type="checkbox"
+             id="other-cost-is-profit"
+             style="font-size: xx-large; height: 25px"
+             [(ngModel)]="otherCost.isProfit">
+    </div>
+
+  </div>
+
+</div>

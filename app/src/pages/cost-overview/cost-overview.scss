@@ -1,0 +1,114 @@
+$add-circle-size: 60px;
+$middle-position-of-circle: calc(50% - (60px / 2));
+
+page-cost-overview {
+
+  .no-costs {
+
+    text-align: center;
+    color: #ff5353;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: 0;
+
+  }
+
+  .cost-container {
+
+    height: 100%;
+    width: 100%;
+
+    .cost {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      text-align: center;
+
+      border-bottom: solid 2px purple;
+
+      padding: 20px 0;
+
+      .date {
+        width: 30%;
+      }
+
+      .information {
+        width: 50%;
+      }
+
+      .profit {
+        width: 20%;
+      }
+
+    }
+  }
+
+  .left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+
+    width: 100px;
+    height: 100%;
+
+    background-color: #ff5353;
+    color: white;
+
+  }
+
+  ion-footer {
+    height: 70px;
+
+    .add-new-cost {
+
+      position: absolute;
+      top: $middle-position-of-circle;
+      right: $middle-position-of-circle;
+
+      font-size: $add-circle-size;
+      color: purple;
+
+    }
+
+    .total-result {
+      position: absolute;
+      top: 25%;
+      right: 10px;
+
+      font-size: 25px;
+
+      &.negative {
+        color: #ff5353;
+      }
+
+      &:before {
+        content: '€ ';
+      }
+    }
+
+  }
+
+  .item-inner {
+    border-bottom: hidden !important;
+    padding: 0 !important;
+  }
+
+  ion-label {
+    margin: 0 !important;
+    white-space: normal !important;
+  }
+
+  .item {
+    padding: 0 !important;
+  }
+
+  ion-item-options {
+    border-bottom: solid 2px purple !important;
+  }
+
+}

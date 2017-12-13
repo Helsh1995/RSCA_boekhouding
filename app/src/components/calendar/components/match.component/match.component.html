@@ -1,0 +1,22 @@
+<div class="match-container">
+
+  <span class="time">{{getDateInCorrectFormat()}} </span>
+
+  <div class="competitors">
+    <span [ngClass]="{'anderlecht': isAnderlecht(match.competitors[0]) }">{{match.competitors[0].name}}</span>
+    <span> - </span>
+    <span [ngClass]="{'anderlecht': isAnderlecht(match.competitors[1]) }">{{match.competitors[1].name}}</span>
+  </div>
+
+  <span class="outcome" [ngClass]="{'busy': match.matchEnded == false}"
+        *ngIf="match.result.home != null && match.result.away !=null ">
+    <span>{{match.result.home}}</span>
+    <span> - </span>
+    <span>{{match.result.away}}</span>
+  </span>
+
+  <span class="outcome" *ngIf="match.result.home == null || match.result.away == null">
+    NA
+  </span>
+
+</div>

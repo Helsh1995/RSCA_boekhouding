@@ -1,0 +1,59 @@
+<ion-header>
+
+  <header leftIcon="arrow-back" (leftAction)="goBack()"></header>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngIf="costs.length"
+            class="cost-container">
+
+    <ion-item-sliding *ngFor="let cost of costs">
+
+      <ion-item>
+
+        <div class="cost" (click)="editCost(cost)">
+          <span class="date">{{cost.getDate()}}</span>
+          <span class="information">{{cost.getDisplayInformation()}}</span>
+          <span class="profit">€{{cost.getProfit()}}</span>
+        </div>
+
+      </ion-item>
+
+      <ion-item-options side="left">
+
+        <div class="left-container" (click)="removeCost(cost)">
+          <ion-icon name="trash"></ion-icon>
+        </div>
+
+
+      </ion-item-options>
+
+
+    </ion-item-sliding>
+
+
+  </ion-list>
+
+  <p *ngIf="!costs.length"
+     class="no-costs">
+    Er zijn nog geen kosten ingegeven
+  </p>
+
+</ion-content>
+
+<ion-footer>
+
+  <ion-icon class="add-new-cost"
+            name="add-circle"
+            (click)="addNewCost()">
+  </ion-icon>
+
+  <span class="total-result" [ngClass]="{negative: totalResult < 0}">
+    {{totalResult}}
+  </span>
+
+
+</ion-footer>

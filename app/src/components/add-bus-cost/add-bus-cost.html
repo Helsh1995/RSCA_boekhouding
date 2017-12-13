@@ -1,0 +1,228 @@
+<div>
+
+  <div class="matching-fields">
+
+    <!--competitor-->
+    <div class="input-field">
+
+      <label for="competitor">Tegenstander:</label>
+
+      <select [(ngModel)]="busCost.competitor"
+              id="competitor">
+
+        <option *ngFor="let competitor of listOfCompetitors">
+          {{competitor}}
+        </option>
+
+      </select>
+
+    </div>
+
+    <!--date-->
+    <div class="input-field">
+
+      <label for="date">Datum: </label>
+      <div class="input">
+        <input type="date"
+               id="date"
+               [(ngModel)]="busCost.date">
+
+        <p>{{ getErrorMessage('date') }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+
+    <!--amountOfMembers-->
+    <div class="input-field">
+
+      <label for="amountOfMembers">Aantal leden: </label>
+      <div class="input">
+        <input type="number"
+               id="amountOfMembers"
+               [(ngModel)]="busCost.amountOfMembers">
+
+        <p>{{ getErrorMessage('amountOfMembers') }}</p>
+      </div>
+
+    </div>
+
+    <!--costMember-->
+    <div class="input-field">
+
+      <label for="costMember">Kostprijs lid: </label>
+
+      <div class="input">
+        <input type="number"
+               id="costMember"
+               [(ngModel)]="busCost.costMember">
+
+        <p>{{ getErrorMessage('costMember') }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+    <!--amountOfNoneMembers-->
+    <div class="input-field">
+
+      <label for="amountOfNoneMembers">Aantal niet leden: </label>
+      <div class="input">
+        <input type="number"
+               id="amountOfNoneMembers"
+               [(ngModel)]="busCost.amountOfNoneMembers">
+
+        <p>{{ getErrorMessage('amountOfNoneMembers') }}</p>
+      </div>
+
+    </div>
+
+    <!--costNoneMember-->
+    <div class="input-field">
+
+      <label for="costNoneMember">Kostprijs niet lid: </label>
+      <div class="input">
+        <input type="number"
+               id="costNoneMember"
+               [(ngModel)]="busCost.costNoneMember">
+
+        <p>{{ getErrorMessage('costNoneMember') }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+
+    <!--amountOfKids-->
+    <div class="input-field">
+
+      <label for="amountOfKids">Aantal kinderen: </label>
+      <div class="input">
+        <input type="number"
+               id="amountOfKids"
+               [(ngModel)]="busCost.amountOfKids">
+
+        <p>{{ getErrorMessage('amountOfKids') }}</p>
+      </div>
+
+    </div>
+
+    <!--costKid-->
+    <div class="input-field">
+
+      <label for="costKid">Kostprijs kind: </label>
+      <div class="input">
+        <input type="number"
+               id="costKid"
+               [(ngModel)]="busCost.costKid">
+
+        <p>{{ getErrorMessage('costKid') }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+
+    <!--amountOfJupilers-->
+    <div class="input-field">
+
+      <label for="amountOfJupilers">Aantal Jupilers: </label>
+      <div class="input">
+        <input type="number"
+               id="amountOfJupilers"
+               [(ngModel)]="busCost.amountOfJupilers">
+
+        <p>{{ getErrorMessage('amountOfJupilers') }}</p>
+      </div>
+
+    </div>
+
+    <!--costJupiler-->
+    <div class="input-field">
+
+      <label for="costJupiler">Kostprijs 1 bak Jupiler: </label>
+      <div class="input">
+        <input type="number"
+               id="costJupiler"
+               [(ngModel)]="busCost.costJupiler">
+
+        <p>{{ getErrorMessage('costJupiler') }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+
+    <!--amountOfColas-->
+    <div class="input-field">
+
+      <label for="amountOfColas">Aantal cola's: </label>
+      <div class="input">
+        <input type="number"
+               id="amountOfColas"
+               [(ngModel)]="busCost.amountOfColas">
+
+        <p>{{ getErrorMessage('amountOfColas') }}</p>
+      </div>
+
+    </div>
+
+    <!--costCola-->
+    <div class="input-field">
+
+      <label for="costCola">Kostprijs 8 cola's: </label>
+      <div class="input">
+        <input type="number"
+               id="costCola"
+               [(ngModel)]="busCost.costCola">
+
+        <p>{{ getErrorMessage('costCola') }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="matching-fields">
+
+    <!--driverCost-->
+    <div class="input-field">
+
+      <label for="driverCost">Drinkgeld chauffeur: </label>
+      <div class="input">
+        <input type="number"
+               id="driverCost"
+               [(ngModel)]="busCost.driverCost">
+
+        <p>{{ getErrorMessage('driverCost') }}</p>
+      </div>
+
+    </div>
+
+    <!--busCost-->
+    <div class="input-field">
+
+      <label for="busCost">Buskost: </label>
+      <div class="input">
+        <input type="number"
+               id="busCost"
+               [(ngModel)]="busCost.busCost">
+
+        <p>{{ getErrorMessage('busCost') }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+<ion-header>
+
+  <header leftIcon="arrow-back"
+          (leftAction)="goBack()"
+          rightText="save"
+          (rightAction)="saveCost()">
+  </header>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="select-tab-container">
+
+    <div class="tab-item"
+         [ngClass]="{'selected': selectedTab =='bus'}"
+         (click)="switchTab('bus')">
+      bus
+    </div>
+
+    <div class="tab-item"
+         [ngClass]="{'selected': selectedTab =='other'}"
+         (click)="switchTab('other')">
+      andere
+    </div>
+
+  </div>
+
+  <div class="cost-container">
+    <add-bus-cost *ngIf="selectedTab == 'bus'" [busCost]="busCost" [errors]="errors"></add-bus-cost>
+    <add-other-cost *ngIf="selectedTab == 'other'" [otherCost]="otherCost" [errors]="errors"></add-other-cost>
+  </div>
+
+</ion-content>
+
+<ion-footer class="cost-profit">
+
+  <p [ngClass]="{'negative': busCost.getProfit() < 0}" *ngIf="selectedTab =='bus'">{{busCost.getProfit()}}</p>
+  <p [ngClass]="{'negative': otherCost.getProfit() < 0}" *ngIf="selectedTab =='other'">{{otherCost.getProfit()}}</p>
+
+</ion-footer>

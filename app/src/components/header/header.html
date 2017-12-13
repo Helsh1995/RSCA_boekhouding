@@ -1,0 +1,18 @@
+<ion-navbar hideBackButton="true">
+
+  <div class="header-item left-item" (click)="onLeftItemClicked($event)">
+    <ion-icon *ngIf="leftIcon" name="{{leftIcon}}"></ion-icon>
+    <span *ngIf="leftText">{{leftText}}</span>
+  </div>
+
+  <div class="header-item center-item" (click)="onCenterItemClicked($event)">
+    <ion-icon *ngIf="centerIcon" name="{{centerIcon}}"></ion-icon>
+    <span *ngIf="centerText">{{centerText}}</span>
+  </div>
+
+  <div class="header-item right-item" (click)="onRightItemClicked($event)">
+    <ion-icon *ngIf="rightIcon" name="{{rightIcon}}"></ion-icon>
+    <span *ngIf="rightText">{{rightText}}</span>
+  </div>
+
+</ion-navbar>

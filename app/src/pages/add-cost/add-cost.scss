@@ -1,0 +1,96 @@
+page-add-cost {
+
+  .select-tab-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .tab-item {
+      flex: 1;
+
+      text-align: center;
+
+      font-size: 30px;
+
+      &.selected {
+
+        color: purple;
+        border-bottom: solid 2px purple;
+
+      }
+    }
+
+  }
+
+  .cost-container {
+    padding: 16px;
+  }
+
+  .cost-profit {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+
+      font-size: 20px;
+
+      &.negative {
+        color: red;
+      }
+
+      &:before {
+        content: '€ ';
+      }
+
+    }
+  }
+
+  .matching-fields {
+
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    @media (min-width: 700px) {
+
+      flex-direction: row;
+
+      .input-field {
+        width: 50%;
+      }
+    }
+
+    .input-field {
+
+      display: flex;
+      margin: 10px;
+
+      label, input, select, div {
+        flex: 1;
+      }
+
+      .input {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 0;
+          color: red;
+        }
+      }
+
+      input, select {
+        border: solid thin black;
+        padding-left: 20px;
+        border-radius: 50px;
+      }
+
+    }
+
+  }
+
+}

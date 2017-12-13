@@ -1,0 +1,62 @@
+calendar, .calendar {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  position: relative;
+
+  .matchday {
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: hidden;
+
+    min-width: 250px;
+    width: 100%;
+
+    padding: 10px;
+
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background-color: purple;
+      -webkit-box-shadow: 0 0 1px purple;
+    }
+
+    .header {
+
+      border-bottom: solid thin purple;
+
+      .day {
+        text-align: center;
+
+        width: 100%;
+      }
+    }
+
+  }
+
+  .list-of-matches {
+    overflow-y: scroll;
+    margin: 0;
+  }
+
+  .icon {
+    position: absolute;
+    top: 28px;
+
+    &.left {
+      left: 20px;
+    }
+
+    &.right {
+      right: 20px;
+    }
+  }
+
+}

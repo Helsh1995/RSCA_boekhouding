@@ -1,0 +1,21 @@
+<div class="calendar">
+
+  <ion-icon class="icon left" name="arrow-back" (click)="showPrev()" *ngIf="canGoToPrevDay"></ion-icon>
+  <ion-icon class="icon right" name="arrow-forward" (click)="showNext()" *ngIf="canGoToNextDay"></ion-icon>
+
+  <div *ngFor="let item of visibleMatches"
+       class="matchday">
+
+    <div class="header">
+      <p class="day">{{getDateInCorrectFormat(item.day)}}</p>
+    </div>
+
+    <ion-list class="list-of-matches">
+      <match *ngFor="let match of item.matches"
+             [match]="match">
+      </match>
+    </ion-list>
+
+  </div>
+
+</div>

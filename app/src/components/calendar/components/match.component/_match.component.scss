@@ -1,0 +1,44 @@
+match {
+
+  .match-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 10px 0;
+
+    min-height: 50px;
+
+    border-bottom: solid thin purple;
+
+    .time {
+      width: 20%;
+      text-align: center;
+    }
+
+    .competitors {
+      width: 60%;
+      height: 100%;
+      text-align: center;
+
+      .anderlecht {
+        color: purple;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      span {
+        height: 100%;
+      }
+    }
+
+    .outcome {
+      width: 20%;
+      text-align: center;
+
+      &.busy {
+        color: red;
+      }
+    }
+  }
+}
